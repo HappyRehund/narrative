@@ -6,5 +6,6 @@ const connectionString = process.env.DATABASE_URL!;
 const queryClient = postgres(connectionString);
 
 export const db = drizzle({
-  client: queryClient
+  client: queryClient,
+  casing: "snake_case"
 })
